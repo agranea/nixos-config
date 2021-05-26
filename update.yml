@@ -1,0 +1,16 @@
+---
+- hosts: all
+  remote_user: root
+  gather_facts: no
+  pre_tasks:
+    - name: make sure we have python
+      raw: nix-env -iA nixos.python3
+  tasks:
+    - name: Copy machine to correct directory
+      copy:
+        src: "./machines/{{ lookup('env', 'MACHINE') }}/"
+        dest: /etc/nixos/
+        directory_mode: yes
+
+    - name: Switch to new Nix derivation
+      shell: nixos-rebuild switch
