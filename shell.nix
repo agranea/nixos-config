@@ -12,6 +12,5 @@ in
     buildInputs = with pkgs; [ git cachix ansible gnumake terraform terragrunt packer fd nixfmt niv lorri direnv tflint ripgrep opam2nix shell2cache ];
     shellHook = ''
         export MACHINE="tjens"
-        cachix use ${cache_name}
     '';
 }
