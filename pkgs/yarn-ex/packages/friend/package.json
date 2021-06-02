@@ -1,0 +1,17 @@
+{
+  "name": "@agra/friend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "bin": {
+    "friend": "bin.js"
+  },
+  "dependencies": {
+    "@agra/agra": "1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  }
+}

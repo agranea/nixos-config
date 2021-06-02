@@ -9,7 +9,7 @@ let
   '';
 in 
   pkgs.mkShell {
-    buildInputs = with pkgs; [ git cachix ansible gnumake terraform terragrunt packer fd nixfmt niv lorri direnv tflint ripgrep opam2nix shell2cache ];
+    buildInputs = with pkgs; [ git ansible gnumake terraform terragrunt packer fd nixfmt niv lorri direnv tflint ripgrep opam2nix shell2cache nodejs ];
     shellHook = ''
         export MACHINE="tjens"
     '';
