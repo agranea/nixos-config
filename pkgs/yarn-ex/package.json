@@ -1,6 +1,14 @@
 {
-  "name": "@agra/root",
+  "name": "root",
   "version": "0.1.0",
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna exec -- yarn build"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
 }

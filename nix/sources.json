@@ -11,6 +11,18 @@
         "url": "https://github.com/nmattia/niv/archive/1819632b5823e0527da28ad82fecd6be5136c1e9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nix-inclusive": {
+        "branch": "master",
+        "description": "Inclusive file selection function for Nix",
+        "homepage": null,
+        "owner": "input-output-hk",
+        "repo": "nix-inclusive",
+        "rev": "28bf7ef96d3eb5c04026b5cdae870ad9dc677712",
+        "sha256": "1yllnqw0qip8rv7jqqxmdfhj9pn8rghq3sh80ibjz8vnbm5y7mx5",
+        "type": "tarball",
+        "url": "https://github.com/input-output-hk/nix-inclusive/archive/28bf7ef96d3eb5c04026b5cdae870ad9dc677712.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nixpkgs": {
         "branch": "nixos-20.09",
         "description": "Nix Packages collection",
