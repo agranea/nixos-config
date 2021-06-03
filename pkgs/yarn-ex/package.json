@@ -9,6 +9,9 @@
     "build": "lerna exec -- yarn build"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@types/node": "^15.9.0",
+    "lerna": "^4.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
   }
 }
