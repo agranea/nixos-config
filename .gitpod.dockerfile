@@ -32,5 +32,12 @@ RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh \
   && nix-env -iA cachix -f https://cachix.org/api/v1/install \
   && cachix use losercache
 
-# n. Give back control
+# let's cache packages
+RUN mkdir /home/gitpod/nix/
+RUN nix-shell -p curl --command "curl https://raw.githubusercontent.com/agranea/nixos-config/main/shell.nix -o /home/gitpod/shell.nix"
+RUN nix-shell -p curl --command "curl https://raw.githubusercontent.com/agranea/nixos-config/main/nix/pkgs.nix -o /home/gitpod/nix/pkgs.nix"
+RUN nix-shell -p curl --command "curl https://raw.githubusercontent.com/agranea/nixos-config/main/nix/sources.json -o /home/gitpod/nix/sources.json"
+RUN nix-shell -p curl --command "curl https://raw.githubusercontent.com/agranea/nixos-config/main/nix/sources.nix -o /home/gitpod/nix/sources.nix"
+RUN nix-shell --command whoami 
+
 USER root

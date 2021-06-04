@@ -17,5 +17,6 @@ in
       shell2cache
       nodejs
       rundocs
+      yarn
     ];
 }
