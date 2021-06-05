@@ -17,7 +17,12 @@ pkgs.yarn2nix-moretea.mkYarnWorkspace {
   '';
   packageOverrides = {
     agra-friend = {
-      distPhase = dist-for-pkg "@agra/friend";
+      #distPhase = dist-for-pkg "@agra/friend";
+      buildPhase = ''
+        cp -r $src/* .
+        ${pkgs.tree}/bin/tree -L 4 .
+        ${pkgs.esbuild}/bin/esbuild ./src/index.ts --bundle --platform=node --outdir=$out
+      '';
     };
   };
 }

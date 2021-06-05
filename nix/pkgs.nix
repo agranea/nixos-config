@@ -9,6 +9,9 @@ let
     shell2cache = pkgs.writeScriptBin "shell2cache" ''
       nix-store --query --references $(nix-instantiate shell.nix) | xargs nix-store --realise | xargs nix-store --query --requisites | cachix push ${cache_name}
     '';
+    clonenix = pkgs.writeScriptBin "clonenix" ''
+      ${pkgs.git} clone --depth 1 https://github.com/agranea/nixpkgs
+    '';
     rundocs = pkgs.writeScriptBin "rundocs" ''
       ${pkgs.nodePackages.nodemon}/bin/nodemon -e md -x ${pkgs.nodePackages.serve}/bin/serve ./docs -w ./docs
     '';
