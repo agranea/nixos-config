@@ -1,1 +1,1 @@
-(import ./nix/pkgs.nix {}).packages
+(import ./nix/pkgs.nix {})

@@ -5,9 +5,6 @@
   "scripts": {
     "build": "tsc"
   },
-  "bin": {
-    "friend": "bin.js"
-  },
   "dependencies": {
     "@agra/agra": "1.0.0"
   },

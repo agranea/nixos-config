@@ -9,7 +9,6 @@ in
       ansible
       gnumake
       fd
-      packages.yarn-ex.agra-friend
       nixfmt
       niv
       direnv
@@ -18,5 +17,9 @@ in
       nodejs
       rundocs
       yarn
+      lorri
     ];
+    shellHook = ''
+      echo "${pkgs.packages.yarn-ex.agra-friend}"
+    '';
 }
