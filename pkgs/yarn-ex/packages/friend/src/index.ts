@@ -1,3 +1,6 @@
 import { nose } from '@agra/agra'
 
-export default () => nose
+export const app = () => { 
+    console.log("let's go")
+    return nose
+}

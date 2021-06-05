@@ -9,7 +9,7 @@ in
       ansible
       gnumake
       fd
-      # packages.yarn-ex
+      packages.yarn-ex.agra-friend
       nixfmt
       niv
       direnv

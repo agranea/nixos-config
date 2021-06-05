@@ -1,1 +1,1 @@
-export const nose = { friend: false }
+export const nose = { size: "large", smellFactor: "plentyful" }

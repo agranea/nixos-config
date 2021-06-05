@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const bin = require("./dist")
+const { app } = require("./dist")
 
-console.log(bin())
+console.log(app())
