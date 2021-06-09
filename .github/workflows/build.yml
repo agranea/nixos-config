@@ -1,0 +1,10 @@
+name: build
+
+on: push
+
+jobs:
+  run-shell:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - run: nix-shell
